@@ -1,0 +1,9 @@
+{% if service_machine_list %}
+    <ul>
+    {% for service_machine in service_machine_list.all %}
+        <li><a href="/service_manage/{{ service_machine.id }}">{{ service_machine.service_machine_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No service are available</p>
+{% endif %}
