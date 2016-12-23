@@ -1,2 +1,4 @@
 # monitor_eye
-the monitor of system
+##项目介绍
+
+这个项目是为了学习django和salt工具集成开发的管理系统，希望可以实现资产管理和任务下发等操作。后续的功能希望可以不断完善。
