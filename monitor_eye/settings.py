@@ -1,3 +1,4 @@
+#coding:utf-8
 """
 Django settings for monitor_eye project.
 
@@ -37,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'service_manage',
+    'service_manage',    #服务器资产管理
+    'monitoreye',   #主页面站点
 ]
 
 MIDDLEWARE = [
@@ -118,6 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
+#LANGUAGE_CODE = 'zh-CN'
 
 #TIME_ZONE = 'UTC'
 TIME_ZONE = 'Asia/Shanghai'

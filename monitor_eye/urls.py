@@ -1,3 +1,4 @@
+
 """monitor_eye URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -16,7 +17,9 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+
 urlpatterns = [
+    #url(r'^$', monitoreye.view.index.monitor_index),  
     url(r'^admin/', admin.site.urls),
     url(r'^service_manage/', include('service_manage.urls')),
 ]
