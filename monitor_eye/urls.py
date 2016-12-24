@@ -19,7 +19,7 @@ from django.contrib import admin
 
 
 urlpatterns = [
-    #url(r'^$', monitoreye.view.index.monitor_index),  
+    url(r'^$', include('monitoreye.urls')),  
     url(r'^admin/', admin.site.urls),
     url(r'^service_manage/', include('service_manage.urls')),
 ]
