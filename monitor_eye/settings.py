@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles',    #设置静态文件
+    'django.contrib.humanize',
     'service_manage',    #服务器资产管理
     'monitoreye',   #主页面站点
 ]
@@ -135,4 +136,33 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_ROOT = 'static/'
+STATIC_URL = '/static/'    #如果设置为非空时，结尾必须是反斜杠,用来访问位于STATIC_ROOT中的静态文件的URL
+
+STATICFILES_DIRS = (
+    ('css', os.path.join(STATIC_ROOT, 'css').replace('\\', '/')),   #这样可以使用css代替后边的路径
+    ('js', os.path.join(STATIC_ROOT, 'js').replace('\\', '/')),
+    ('img', os.path.join(STATIC_ROOT, 'img').replace('\\', '/')),
+    ('fonts', os.path.join(STATIC_ROOT, 'fonts').replace('\\', '/')),
+    ('extra', os.path.join(STATIC_ROOT, 'extra').replace('\\', '/')),
+    ('bootstrap', os.path.join(STATIC_ROOT, 'bootstrap').replace('\\', '/')),
+    ('new', os.path.join(STATIC_ROOT, 'new').replace('\\', '/')),
+    ('images', os.path.join(STATIC_ROOT, 'images').replace('\\', '/')),
+    ('ztree', os.path.join(STATIC_ROOT, 'ztree').replace('\\', '/')),
+    ('layer', os.path.join(STATIC_ROOT, 'layer').replace('\\', '/')),
+    ('external', os.path.join(STATIC_ROOT, 'external').replace('\\', '/')),
+    ('pdf', os.path.join(STATIC_ROOT, 'pdf').replace('\\', '/')),
+    ('lib', os.path.join(STATIC_ROOT, 'lib').replace('\\', '/')),
+    ('plugins', os.path.join(STATIC_ROOT, 'plugins').replace('\\', '/')),
+    ('md', os.path.join(STATIC_ROOT, 'md').replace('\\', '/')),
+)
+
+# List of finder classes that know how to find static files in
+# various locations.
+# 这个查找器设置了两种：1.在STATICFILES_DIRS元组的目录中进行查找；2.在每个应用的子目录中进行查找
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    #    'django.contrib.staticfiles.finders.DefaultStorageFinder',   #默认查找器应该禁用
+)
+
