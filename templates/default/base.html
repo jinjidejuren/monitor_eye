@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>MONITOR_EYE</title>
+        <title>MONITOR_EYE运维管理平台</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="author" content="MONITOR_EYE运维管理系统">
-        <!-- Bootstrap css-->
-        <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-
-        <link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
-
-        <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap-theme.css" />
-
-        <!-- Bootstrap js -->
-        <script type="text/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
-
-        <script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
-
-        <!-- jquery -->
-        <script type="text/javascript" src="/static/js/source/jquery-1.10.3.min.js"></script>
-
-        <!-- jquerytanchukuang chajian -->
-        <script type="text/javascript" src="/static/js/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-        <link rel="stylesheet" type="text/css" href="/static/js/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+        
+        <!-- 包含bootstrap文件     -->
+        {% include 'bootstrap.html' %}
+        <!-- 包含css文件  -->
+        {% include 'link_css.html' %}
+        <!-- 包含jquery文件 -->
+        {% include 'javascripts.html' %}
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container-fluid" />
+
+
+        <!-- <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">MONITOR_EYE运维管理系统</a>
+                    <a class="navbar-brand" href="/">MONITOR_EYE运维管理系统</a>
                 </div>
-                <div class="">
-                    
+                <div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">选项<b class="caret"></b></a></li>
+                    </ul>
                 </div>
-        </nav>
-        
+            </div>
+        </nav>  -->
     </body>
 </html>
