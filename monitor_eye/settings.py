@@ -155,6 +155,9 @@ STATICFILES_DIRS = (
     ('lib', os.path.join(STATIC_ROOT, 'lib').replace('\\', '/')),
     ('plugins', os.path.join(STATIC_ROOT, 'plugins').replace('\\', '/')),
     ('md', os.path.join(STATIC_ROOT, 'md').replace('\\', '/')),
+    ('font-awesome', os.path.join(STATIC_ROOT, 'font-awesome').replace('\\', '/')),
+    ('dist', os.path.join(STATIC_ROOT, 'dist').replace('\\', '/')),
+    ('build', os.path.join(STATIC_ROOT, 'build').replace('\\', '/')),
 )
 
 # List of finder classes that know how to find static files in
